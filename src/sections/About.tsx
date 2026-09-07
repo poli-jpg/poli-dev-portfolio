@@ -30,23 +30,6 @@ export function About() {
             </div>
 
             <div className="border-l-2 border-signal pl-5">
-              <h3 className="font-display text-lg font-semibold text-night dark:text-ink">
-                {about.skills.title}
-              </h3>
-              <p className="mt-2 text-base leading-relaxed text-night-muted dark:text-ink-muted">
-                {about.skills.intro}
-              </p>
-              <ul className="mt-3 space-y-2">
-                {about.skills.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-night-muted dark:text-ink-muted">
-                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-signal" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="border-l-2 border-signal pl-5">
               <h3 className="font-display text-lg font-semibold text-night dark:text-ink">{about.build.title}</h3>
               <p className="mt-2 text-base leading-relaxed text-night-muted dark:text-ink-muted">
                 {about.build.text}

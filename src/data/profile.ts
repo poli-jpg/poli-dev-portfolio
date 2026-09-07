@@ -17,15 +17,6 @@ export const profile = {
       title: "Mon approche",
       text: "Je ne me limite pas à écrire du code. Je cherche à comprendre le besoin, imaginer une expérience agréable et construire une solution qui a du sens. J'accorde une attention particulière au design, à la simplicité d'utilisation et à la qualité du développement.",
     },
-    skills: {
-      title: "Mes compétences",
-      intro: "Je développe mes compétences dans plusieurs domaines :",
-      items: [
-        "Développement web : HTML, CSS, JavaScript, PHP, Python, Java et MySQL.",
-        "Outils modernes : Git, GitHub, Supabase, Vercel et Postman.",
-        "CMS & e-commerce : WordPress, WooCommerce.",
-      ],
-    },
     build: {
       title: "Ce que je construis",
       text: "À travers mes projets, je cherche à créer des expériences numériques qui ne sont pas seulement belles, mais aussi utiles, fonctionnelles et pensées pour les utilisateurs. Chaque projet est pour moi une occasion d'apprendre, d'expérimenter et de progresser.",
