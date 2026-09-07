@@ -35,9 +35,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "JavaScript" },
       { name: "PHP" },
       { name: "WordPress" },
-      { name: "WooCommerce" },
-      { name: "Elementor" },
-      { name: "Responsive Design" },
       { name: "API REST" },
     ],
   },
@@ -65,8 +62,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "Supabase" },
       { name: "Canva" },
       { name: "WordPress" },
-      { name: "Elementor" },
-      { name: "WooCommerce" },
     ],
   },
 ];
