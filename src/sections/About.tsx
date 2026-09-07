@@ -1,15 +1,60 @@
-import { SectionHeading } from "@/components/SectionHeading";
 import { profile } from "@/data/profile";
 
 export function About() {
+  const { about } = profile;
+
   return (
     <section id="about" className="border-b border-paper-border bg-paper dark:border-base-border dark:bg-base">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <SectionHeading title="About Me" align="left" />
-          <p className="max-w-2xl text-lg leading-relaxed text-night-muted dark:text-ink-muted">
-            {profile.about}
-          </p>
+          <div>
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-night dark:text-ink sm:text-4xl">
+              About Me
+            </h2>
+            <p className="mt-3 max-w-sm text-base leading-relaxed text-signal">{about.lead}</p>
+          </div>
+
+          <div className="max-w-2xl space-y-10">
+            <div className="space-y-4">
+              <p className="text-lg leading-relaxed text-night-muted dark:text-ink-muted">{about.intro}</p>
+              <p className="text-lg leading-relaxed text-night-muted dark:text-ink-muted">{about.paragraph}</p>
+            </div>
+
+            <div className="border-l-2 border-signal pl-5">
+              <h3 className="font-display text-lg font-semibold text-night dark:text-ink">
+                {about.approach.title}
+              </h3>
+              <p className="mt-2 text-base leading-relaxed text-night-muted dark:text-ink-muted">
+                {about.approach.text}
+              </p>
+            </div>
+
+            <div className="border-l-2 border-signal pl-5">
+              <h3 className="font-display text-lg font-semibold text-night dark:text-ink">
+                {about.skills.title}
+              </h3>
+              <p className="mt-2 text-base leading-relaxed text-night-muted dark:text-ink-muted">
+                {about.skills.intro}
+              </p>
+              <ul className="mt-3 space-y-2">
+                {about.skills.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-night-muted dark:text-ink-muted">
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-signal" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-signal pl-5">
+              <h3 className="font-display text-lg font-semibold text-night dark:text-ink">{about.build.title}</h3>
+              <p className="mt-2 text-base leading-relaxed text-night-muted dark:text-ink-muted">
+                {about.build.text}
+              </p>
+            </div>
+
+            <p className="font-display text-xl font-medium text-night dark:text-ink">{about.ambition}</p>
+          </div>
         </div>
       </div>
     </section>

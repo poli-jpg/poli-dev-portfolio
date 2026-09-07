@@ -4,8 +4,35 @@ export const profile = {
   name: "Poli Dev",
   role: "Software Developer",
   tagline: "I build digital solutions, web applications and scalable systems.",
-  about:
-    "Je suis un développeur passionné par la technologie et la création de solutions numériques. J'aime transformer une idée en application concrète, expérimenter différentes technologies et apprendre continuellement de nouvelles compétences. Mon parcours m'a permis de travailler sur des projets web, e-commerce, SaaS et bases de données. Aujourd'hui, je souhaite aller plus loin en approfondissant mes compétences en développement web et logiciel, afin de pouvoir construire et déployer des applications modernes et fiables.",
+  // Structured "About Me" content — rendered by src/sections/About.tsx.
+  // "Amadou" is the real first name, used only here as a personal introduction;
+  // "Poli Dev" stays the display name everywhere else on the site (navbar, hero, footer...).
+  about: {
+    lead: "Je transforme les idées en expériences numériques.",
+    intro:
+      "Je suis Amadou, développeur logiciel passionné par la création de solutions web modernes, performantes et adaptées aux besoins réels.",
+    paragraph:
+      "Ce qui me passionne dans le développement, c'est de partir d'une idée simple et de la transformer en un projet concret : un site vitrine pour une entreprise, une boutique en ligne ou une plateforme qui facilite la vie de ses utilisateurs.",
+    approach: {
+      title: "Mon approche",
+      text: "Je ne me limite pas à écrire du code. Je cherche à comprendre le besoin, imaginer une expérience agréable et construire une solution qui a du sens. J'accorde une attention particulière au design, à la simplicité d'utilisation et à la qualité du développement.",
+    },
+    skills: {
+      title: "Mes compétences",
+      intro: "Je développe mes compétences dans plusieurs domaines :",
+      items: [
+        "Développement web : HTML, CSS, JavaScript, PHP, Python, Java et MySQL.",
+        "Outils modernes : Git, GitHub, Supabase, Vercel et Postman.",
+        "CMS & e-commerce : WordPress, WooCommerce.",
+      ],
+    },
+    build: {
+      title: "Ce que je construis",
+      text: "À travers mes projets, je cherche à créer des expériences numériques qui ne sont pas seulement belles, mais aussi utiles, fonctionnelles et pensées pour les utilisateurs. Chaque projet est pour moi une occasion d'apprendre, d'expérimenter et de progresser.",
+    },
+    ambition:
+      "Je suis encore en apprentissage, mais je construis déjà mon avenir à travers chaque ligne de code.",
+  },
   contact: {
     email: "developpeur01@icloud.com",
     phone: "+221 78 465 32 51",
@@ -20,4 +47,5 @@ export const profile = {
     siteUrl: "https://poli-dev-portfolio.vercel.app", // Update once deployed.
   },
 };
+
 
