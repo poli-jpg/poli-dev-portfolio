@@ -1,25 +1,20 @@
 import Image from "next/image";
 
-// Replaces the animated terminal in the hero with a portrait photo.
-// Drop your photo at /public/profile-photo.jpg (or .png/.webp — just update the src below)
-// at roughly 800x1000px (portrait) for the sharpest result.
+// Photo : /public/profile-photo.jpg (format portrait conseillé, ~800x1000 px).
 export function ProfilePhoto() {
   return (
-    <div className="relative w-full max-w-sm">
-      <div className="absolute -inset-3 -z-10 rounded-[28px] bg-gradient-to-br from-signal/25 via-signal/5 to-transparent blur-xl" />
-      <div className="overflow-hidden rounded-[24px] border border-base-border bg-base-surface shadow-2xl shadow-black/40">
-        <div className="relative aspect-[4/5] w-full">
-          <Image
-            src="/profile-photo.jpg"
-            alt="Photo de Poli Dev"
-            fill
-            priority
-            sizes="(max-width: 1024px) 90vw, 420px"
-            className="object-cover"
-          />
-        </div>
+    <div className="relative w-56 sm:w-64 lg:w-72">
+      <div className="absolute -inset-4 -z-10 rounded-[32px] bg-accent/10 blur-2xl" />
+      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line">
+        <Image
+          src="/profile-photo.jpg"
+          alt="Photo de Poli Dev"
+          fill
+          priority
+          sizes="(max-width: 1024px) 256px, 288px"
+          className="object-cover grayscale-[30%]"
+        />
       </div>
     </div>
   );
 }
-

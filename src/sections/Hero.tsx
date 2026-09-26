@@ -1,71 +1,50 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { profile } from "@/data/profile";
-
-const focusAreas = ["Web Development", "SaaS", "E-commerce", "API REST"];
+import { projects } from "@/data/projects";
 
 export function Hero() {
-  return (
-    <section
-      id="home"
-      className="relative overflow-hidden border-b border-paper-border bg-paper dark:border-base-border dark:bg-base"
-    >
-      {/* Signature moment: a faint circuit-grid backdrop, used once, only here. */}
-      <div className="pointer-events-none absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,black,transparent)]" />
+  const live = projects.filter((p) => p.status === "live").length;
 
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <p className="font-mono text-sm text-signal">Hi, I&apos;m {profile.name} 👋</p>
-          <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-night dark:text-ink sm:text-5xl lg:text-6xl">
-            {profile.role}
+  return (
+    <section id="home" className="border-b border-line">
+      <div className="mx-auto grid max-w-5xl items-center gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1fr_auto]">
+        <div className="animate-fade-up">
+          <p className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1 text-xs text-fg-muted">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            Disponible pour de nouveaux projets
+          </p>
+          <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.4rem]">
+            {profile.headline}
           </h1>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-night-muted dark:text-ink-muted">
-            {profile.tagline}
+          <p className="mt-5 max-w-xl text-lg text-fg-muted">
+            <span className="text-fg">{profile.name}</span> — {profile.role.toLowerCase()}. {profile.tagline}
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap gap-3">
             <a
               href="#projects"
-              className="group flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-medium text-base transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent-bright"
             >
-              View My Work
+              Voir mes projets
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-paper-border px-6 py-3 text-sm font-medium text-night transition-colors hover:border-signal hover:text-signal dark:border-base-border dark:text-ink"
+              className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:border-fg-dim"
             >
-              Let&apos;s Talk
+              Me contacter
             </a>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-2">
-            {focusAreas.map((area) => (
-              <li
-                key={area}
-                className="rounded-full border border-paper-border px-3 py-1.5 text-xs font-medium text-night-muted dark:border-base-border dark:text-ink-muted"
-              >
-                {area}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+          <p className="mt-10 font-mono text-xs text-fg-dim">
+            {live} projets en production · Next.js · Supabase · Vercel
+          </p>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-          className="flex justify-center lg:justify-end"
-        >
+        <div className="flex justify-center animate-fade-up [animation-delay:150ms] lg:justify-end">
           <ProfilePhoto />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
