@@ -41,6 +41,30 @@ export const projects: Project[] = [
     status: "live",
   },
   {
+    slug: "mounas-chicken",
+    name: "Mouna's Chicken",
+    description:
+      "Site de commande en ligne pour le restaurant Mouna's Chicken (Auchan Keur Massar, Dakar).",
+    longDescription:
+      "Site officiel du restaurant Mouna's Chicken : menu en ligne (pizzas, burgers, poulet…), panier et commande envoyée directement au restaurant sur WhatsApp, avec un espace administrateur pour gérer les produits, les prix, les photos et le suivi des commandes. Conçu pour accueillir un paiement en ligne (PayTech, Wave, Orange Money) plus tard sans refonte.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Zustand", "Framer Motion", "Vercel"],
+    features: [
+      "Menu en ligne par catégories avec fiches produits",
+      "Panier persistant",
+      "Commande enregistrée puis envoyée sur WhatsApp (message prérempli)",
+      "Numéro de commande attribué à chaque client",
+      "Espace admin sécurisé (Supabase Auth + RLS)",
+      "Gestion des produits : prix, photos, disponibilité",
+      "Suivi des commandes par statut (confirmée, en préparation, livrée…)",
+      "Tableau de bord : commandes et chiffre d'affaires",
+      "Animations légères et design responsive",
+      "SEO : sitemap et robots.txt",
+    ],
+    liveUrl: "https://mouna-s-chicken.vercel.app",
+    mockupIcon: "UtensilsCrossed",
+    status: "live",
+  },
+  {
     slug: "maillots-shop",
     name: "Maillots Shop",
     description:
