@@ -47,7 +47,7 @@ export const projects: Project[] = [
       "Site de commande en ligne pour le restaurant Mouna's Chicken (Auchan Keur Massar, Dakar).",
     longDescription:
       "Site officiel du restaurant Mouna's Chicken : menu en ligne (pizzas, burgers, poulet…), panier et commande envoyée directement au restaurant sur WhatsApp, avec un espace administrateur pour gérer les produits, les prix, les photos et le suivi des commandes. Conçu pour accueillir un paiement en ligne (PayTech, Wave, Orange Money) plus tard sans refonte.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Zustand", "Framer Motion", "Vercel"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Vercel"],
     features: [
       "Menu en ligne par catégories avec fiches produits",
       "Panier persistant",
