@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ExternalLink, Github, ShoppingBag, Building2, Globe, Palette, ChevronDown, ChevronUp, type LucideProps } from "lucide-react";
+import { ExternalLink, Github, ShoppingBag, Building2, Globe, Palette, UtensilsCrossed, ChevronDown, ChevronUp, type LucideProps } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/data/projects";
 
@@ -9,6 +9,7 @@ const mockupIconMap: Record<string, React.ComponentType<LucideProps>> = {
   ShoppingBag,
   Building2,
   Palette,
+  UtensilsCrossed,
 };
 
 // Nombre de projets affichés avant le bouton « Voir plus ».
