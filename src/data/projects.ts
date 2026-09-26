@@ -17,6 +17,30 @@ export interface Project {
 // so no component changes are needed to add a new card.
 export const projects: Project[] = [
   {
+    slug: "paint-reverie",
+    name: "The Paint Reverie",
+    description:
+      "Site de réservation en ligne pour des ateliers de peinture à Dakar, avec un espace d'administration complet.",
+    longDescription:
+      "Plateforme sur mesure pour The Paint Reverie, une créatrice d'ateliers de peinture à Dakar : les visiteurs découvrent les prochains ateliers, réservent leur place en quelques clics et demandent des ateliers privés, pendant que la gérante pilote tout depuis un espace admin sécurisé (ateliers, réservations, demandes, galerie) et répond à ses clients sur WhatsApp en un clic.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Resend", "Zod", "Vercel"],
+    features: [
+      "Réservation en ligne avec places restantes en temps réel",
+      "Réservation sécurisée côté base (pas de surréservation)",
+      "Formulaire de demande d'ateliers privés",
+      "Espace admin protégé par authentification",
+      "Gestion des ateliers, réservations et demandes",
+      "Confirmation et relance des clients via WhatsApp",
+      "Export CSV des réservations",
+      "Galerie photos et vidéos administrable",
+      "Notifications e-mail avec Resend",
+      "Design sur mesure et responsive",
+    ],
+    liveUrl: "https://paint-reverie.vercel.app",
+    mockupIcon: "Palette",
+    status: "live",
+  },
+  {
     slug: "maillots-shop",
     name: "Maillots Shop",
     description:

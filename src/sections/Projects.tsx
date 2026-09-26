@@ -1,11 +1,18 @@
-import { ExternalLink, Github, ShoppingBag, Building2, Globe, type LucideProps } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ExternalLink, Github, ShoppingBag, Building2, Globe, Palette, ChevronDown, ChevronUp, type LucideProps } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/data/projects";
 
 const mockupIconMap: Record<string, React.ComponentType<LucideProps>> = {
   ShoppingBag,
   Building2,
+  Palette,
 };
+
+// Nombre de projets affichés avant le bouton « Voir plus ».
+const INITIAL_COUNT = 2;
 
 function getMockupIcon(name?: string) {
   return (name && mockupIconMap[name]) || Globe;
@@ -21,6 +28,10 @@ function getDomain(url?: string) {
 }
 
 export function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? projects : projects.slice(0, INITIAL_COUNT);
+  const hiddenCount = projects.length - INITIAL_COUNT;
+
   return (
     <section id="projects" className="border-b border-paper-border bg-paper dark:border-base-border dark:bg-base">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
@@ -30,7 +41,7 @@ export function Projects() {
         />
 
         <div className="space-y-8">
-          {projects.map((project) => {
+          {visible.map((project) => {
             const MockupIcon = getMockupIcon(project.mockupIcon);
             return (
               <article
@@ -124,6 +135,26 @@ export function Projects() {
             );
           })}
         </div>
+
+        {hiddenCount > 0 ? (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => {
+                if (showAll) document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                setShowAll(!showAll);
+              }}
+              aria-expanded={showAll}
+              className="flex items-center gap-2 rounded-full border border-paper-border px-6 py-3 text-sm font-medium text-night transition-colors hover:border-signal hover:text-signal dark:border-base-border dark:text-ink"
+            >
+              {showAll ? (
+                <>Voir moins <ChevronUp size={16} /></>
+              ) : (
+                <>Voir plus de projets ({hiddenCount}) <ChevronDown size={16} /></>
+              )}
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );
