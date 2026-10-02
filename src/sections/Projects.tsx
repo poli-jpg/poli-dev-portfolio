@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import {
-  ArrowUpRight, Github, ShoppingBag, Building2, Globe, Palette, UtensilsCrossed,
+  ArrowUpRight, Github, ShoppingBag, Building2, Globe, Palette, Scissors,
   ChevronDown, ChevronUp, type LucideProps,
 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/data/projects";
 
-const icons: Record<string, React.ComponentType<LucideProps>> = { ShoppingBag, Building2, Palette, UtensilsCrossed };
+const icons: Record<string, React.ComponentType<LucideProps>> = { ShoppingBag, Building2, Palette, Scissors };
 
 // Nombre de projets affichés avant le bouton « Voir plus ».
 const INITIAL_COUNT = 2;
