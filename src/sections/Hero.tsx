@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
@@ -18,7 +18,8 @@ export function Hero() {
             {profile.headline}
           </h1>
           <p className="mt-5 max-w-xl text-lg text-fg-muted">
-            <span className="text-fg">{profile.name}</span> — {profile.role.toLowerCase()}. {profile.tagline}
+            <span className="text-fg">{profile.name}</span> —{" "}
+            {profile.role.toLowerCase()}. {profile.tagline}
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
@@ -27,13 +28,24 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-accent-bright"
             >
               Voir mes projets
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </a>
             <a
               href="#contact"
               className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:border-fg-dim"
             >
               Me contacter
+            </a>
+            <a
+              href="/CV.pdf"
+              download="CV.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:border-fg-dim"
+            >
+              <Download size={16} />
+              Télécharger mon CV
             </a>
           </div>
 
