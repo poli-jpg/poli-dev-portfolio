@@ -41,7 +41,7 @@ export function Hero() {
             </a>
             <a
               href="/CV.pdf"
-              download="CV.pdf"
+              download="CV-Ama.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:border-fg-dim"
             >
               <Download size={16} />
