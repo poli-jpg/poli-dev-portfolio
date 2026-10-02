@@ -2,7 +2,7 @@
 export const profile = {
   name: "Poli Dev",
   firstName: "Amadou Sy",
-  role: "Développeur web / CMS",
+  role: "Développeur web full-stack",
   headline:
     "Je crée des sites et des applications web qui font avancer votre activité.",
   tagline:
