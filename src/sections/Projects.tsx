@@ -12,7 +12,6 @@ const icons: Record<string, React.ComponentType<LucideProps>> = { ShoppingBag, B
 
 // Nombre de projets affichés avant le bouton « Voir plus ».
 const INITIAL_COUNT = 2;
-const MAX_STACK = 5;
 
 const domain = (url?: string) => {
   try { return url ? new URL(url).hostname : ""; } catch { return url ?? ""; }
@@ -35,7 +34,6 @@ export function Projects() {
         <div className="grid gap-5 md:grid-cols-2">
           {visible.map((p) => {
             const Icon = (p.mockupIcon && icons[p.mockupIcon]) || Globe;
-            const extra = p.stack.length - MAX_STACK;
             return (
               <article
                 key={p.slug}
@@ -67,14 +65,6 @@ export function Projects() {
                   ))}
                 </ul>
 
-                <ul className="mt-5 flex flex-wrap gap-1.5">
-                  {p.stack.slice(0, MAX_STACK).map((t) => (
-                    <li key={t} className="rounded-md border border-line px-2 py-0.5 font-mono text-[11px] text-fg-dim">{t}</li>
-                  ))}
-                  {extra > 0 ? (
-                    <li className="rounded-md px-2 py-0.5 font-mono text-[11px] text-fg-dim">+{extra}</li>
-                  ) : null}
-                </ul>
 
                 <div className="mt-auto flex flex-wrap gap-2 pt-6">
                   {p.liveUrl ? (

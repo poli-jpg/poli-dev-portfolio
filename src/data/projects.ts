@@ -3,7 +3,6 @@ export interface Project {
   name: string;
   description: string;
   longDescription?: string;
-  stack: string[];
   features: string[];
   liveUrl?: string;
   repoUrl?: string; // Leave undefined if there is no public repo — the UI hides the "View code" button automatically.
