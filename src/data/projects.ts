@@ -23,7 +23,6 @@ export const projects: Project[] = [
       "Site de réservation en ligne pour des ateliers de peinture à Dakar, avec un espace d'administration complet.",
     longDescription:
       "Plateforme sur mesure pour The Paint Reverie, une créatrice d'ateliers de peinture à Dakar : les visiteurs découvrent les prochains ateliers, réservent leur place en quelques clics et demandent des ateliers privés, pendant que la gérante pilote tout depuis un espace admin sécurisé (ateliers, réservations, demandes, galerie) et répond à ses clients sur WhatsApp en un clic.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Resend", "Zod", "Vercel"],
     features: [
       "Réservation en ligne avec places restantes en temps réel",
       "Réservation sécurisée côté base (pas de surréservation)",
@@ -46,10 +45,8 @@ export const projects: Project[] = [
     description:
       "Application SaaS pour les ateliers de couture au Sénégal : clients, mesures, commandes et paiements dans la poche du tailleur.",
     longDescription:
-      "Mon propre produit, de l'idée au lancement : une application mobile (PWA) qui remplace le cahier du tailleur. Fiches clients avec mesures homme et femme, commandes avec photos du tissu et du modèle, suivi de la coupe à la livraison, acomptes et reste à payer, et message WhatsApp prérempli quand la tenue est prête. Chaque atelier a ses données isolées et un abonnement mensuel avec période d'essai.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "PWA", "Vercel"],
+      "Mon propre produit, de l'idée au lancement : Fiches clients avec mesures homme et femme, commandes avec photos du tissu et du modèle, suivi de la coupe à la livraison, acomptes et reste à payer, et message WhatsApp prérempli quand la tenue est prête. Chaque atelier a ses données isolées et un abonnement mensuel avec période d'essai.",
     features: [
-      "Application installable sur téléphone (PWA)",
       "Fiches clients avec mesures homme et femme",
       "Commandes avec photos du tissu et du modèle",
       "Suivi par étapes : reçue, coupe, couture, prête, livrée",
@@ -71,7 +68,6 @@ export const projects: Project[] = [
       "Une plateforme e-commerce permettant aux clients de découvrir et commander des maillots de football en ligne.",
     longDescription:
       "Boutique en ligne complète pensée pour le marché africain : catalogue filtrable, gestion des données produits via Supabase, tunnel de commande, paiement en ligne via PayTech et prise de contact directe par WhatsApp Business pour lever les frictions à l'achat.",
-    stack: ["HTML", "CSS", "JavaScript", "Supabase", "Vercel", "Postman", "API", "PayTech"],
     features: [
       "Catalogue de maillots avec affichage des produits",
       "Filtrage des produits",
@@ -94,9 +90,7 @@ export const projects: Project[] = [
     slug: "ndayane-group",
     name: "Ndayane Group",
     description: "Site vitrine d'entreprise pour Ndayane Group.",
-    longDescription:
-      "Site vitrine présentant l'entreprise Ndayane Group, construit avec Next.js et déployé sur Vercel, avec Supabase pour la gestion des données.",
-    stack: ["Next.js", "Supabase", "Vercel", "VS Code"],
+    longDescription: "Site vitrine présentant l'entreprise Ndayane Group.",
     features: ["Page d'accueil présentant l'entreprise Ndayane Group"],
     liveUrl: "https://ndayane-group.vercel.app/",
     repoUrl: "https://github.com/poli-jpg/Ndayane-group.git",
