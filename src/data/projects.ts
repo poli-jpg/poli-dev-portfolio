@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "14 jours d'essai gratuit puis abonnement",
     ],
     mockupIcon: "NotebookPen",
-    status: "in-progress",
+    status: "live",
   },
   {
     slug: "ligeey",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       "Application mobile installable (PWA)",
     ],
     mockupIcon: "HardHat",
-    status: "in-progress",
+    status: "live",
   },
   {
     slug: "maillots-shop",
