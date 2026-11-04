@@ -39,7 +39,7 @@ export const profile = {
     "Vercel",
   ],
   contact: {
-    email: "developpeur01@icloud.com",
+    email: "amadousy2505@gmail.com",
     phone: "+221 78 465 32 51",
     github: "https://github.com/poli-jpg",
     linkedin: "", // Ajoutez votre URL LinkedIn ici si vous en avez une.
